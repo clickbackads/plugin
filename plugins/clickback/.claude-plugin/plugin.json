@@ -1,0 +1,31 @@
+{
+  "name": "clickback",
+  "version": "0.1.0",
+  "description": "Get paid for the one-line sponsored messages Clickback shows above your prompt after a turn. Ads go to you, never to Claude. Needs Claude Code 2.1.287 or later.",
+  "author": {
+    "name": "Clickback",
+    "url": "https://clickback.dev"
+  },
+  "homepage": "https://clickback.dev",
+  "keywords": [
+    "ads",
+    "earnings",
+    "sponsored"
+  ],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "api_token": {
+      "type": "string",
+      "title": "Clickback API token",
+      "description": "Create one on your Clickback dashboard. It is kept in your system keychain.",
+      "sensitive": true,
+      "required": true
+    },
+    "base_url": {
+      "type": "string",
+      "title": "Clickback server",
+      "description": "Leave as is unless you are testing against another Clickback server.",
+      "default": "https://clickback.dev"
+    }
+  }
+}

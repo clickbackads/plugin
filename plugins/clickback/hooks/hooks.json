@@ -1,0 +1,4 @@
+{
+  "description": "Shows one Clickback ad above your prompt after a turn. Claude never sees it.",
+  "modules": ["./clickback.ts"]
+}

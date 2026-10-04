@@ -1,0 +1,16 @@
+{
+    "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+    "name": "clickback",
+    "description": "Clickback: get paid for the sponsored lines you see in your coding agent.",
+    "owner": {
+        "name": "Clickback",
+        "url": "https://clickback.dev"
+    },
+    "plugins": [
+        {
+            "name": "clickback",
+            "source": "./plugins/clickback",
+            "description": "Shows you one sponsored line after each turn and pays you for it. Ads go to you, never to Claude."
+        }
+    ]
+}
