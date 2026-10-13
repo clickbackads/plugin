@@ -20,6 +20,8 @@ declare module 'claude-code' {
     clickback: {
       ad: ClickbackAd | null
       prompts: number
+      /** The MCP server to sign in to (`plugin:clickback:clickback`), while the band says so. */
+      signIn: string | null
     }
   }
 }
