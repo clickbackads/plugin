@@ -1,7 +1,7 @@
 {
   "name": "clickback",
-  "version": "0.2.0",
-  "description": "Get paid for the one-line sponsored messages Clickback shows above your prompt after a turn. Ads go to you, never to Claude. Sign in once with /mcp. Needs Claude Code 2.1.287 or later.",
+  "version": "0.3.0",
+  "description": "Get paid for the one-line sponsored messages Clickback shows above your prompt after a turn. Ads go to you, never to Claude. Connect each computer once, from the link that shows above the prompt. Needs Claude Code 2.1.287 or later.",
   "author": {
     "name": "Clickback",
     "url": "https://clickback.dev"

@@ -1,19 +1,4 @@
 {
   "description": "Shows one Clickback ad above your prompt after a turn. Claude never sees it.",
-  "modules": ["./clickback.ts"],
-  "hooks": {
-    "PermissionRequest": [
-      {
-        "matcher": "mcp__plugin_clickback_clickback__serve_ad",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "sh",
-            "args": ["${CLAUDE_PLUGIN_ROOT}/hooks/allow-serve-ad.sh"],
-            "timeout": 5
-          }
-        ]
-      }
-    ]
-  }
+  "modules": ["./clickback.ts"]
 }

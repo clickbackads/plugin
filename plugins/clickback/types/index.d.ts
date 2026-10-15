@@ -5,14 +5,29 @@
 export type ClickbackAd = {
   advertiser: string
   headline: string
-  /** The advertiser's host, shown as the link's text. */
+  /** The advertiser's host, shown at the end of the line. */
   host: string
-  /** The Clickback tracking URL the link opens. */
+  /** The Clickback tracking URL the link opens, at most 2048 characters. */
   url: string
-  /** Whether `url` is one a `Link` accepts (https, or http://localhost). */
-  isLinkable: boolean
   /** How many prompts the session had submitted when the ad arrived. */
   prompt: number
+  /** The impression's id on the server. */
+  impressionId: string
+  /** Where the mod confirms the ad was drawn, on the Clickback server. */
+  shownUrl: string
+}
+
+/**
+ * The line asking the person to connect this computer, while a link waits for
+ * approval. The device code stays in `$.store`, which other plugins can't read.
+ */
+export type ClickbackLink = {
+  /** verification_uri_complete: the approval page with the code filled in, which the link opens. */
+  url: string
+  /** verification_uri, shown in the line, so it can be typed with the code. */
+  label: string
+  /** The code the page shows, for the person to check, e.g. ABCD-EFGH. */
+  code: string
 }
 
 declare module 'claude-code' {
@@ -20,8 +35,7 @@ declare module 'claude-code' {
     clickback: {
       ad: ClickbackAd | null
       prompts: number
-      /** The MCP server to sign in to (`plugin:clickback:clickback`), while the band says so. */
-      signIn: string | null
+      link: ClickbackLink | null
     }
   }
 }

@@ -15,9 +15,9 @@ Use the `clickback` MCP tools for account questions:
 - **"Update my profile"**: `get_profile` to see what is blank, then ask about those fields one or two at a time and save with `update_profile`. Every field is optional, so accept "skip". Only send fields they answered.
 - **"Which ads have I seen?"**: `recent_ads`.
 
-Never call `serve_ad`. It belongs to the plugin, which shows the ads, and a call from you is refused.
+The tools need their own sign-in. If a tool says they aren't signed in, tell them to run `/mcp`, pick `plugin:clickback:clickback` and choose Authenticate. In the Claude Desktop app it's `claude mcp login plugin:clickback:clickback` in a terminal.
 
-If a tool says they aren't signed in, tell them to run `/mcp`, pick `plugin:clickback:clickback` and choose Authenticate. In the Claude Desktop app it's `claude mcp login plugin:clickback:clickback` in a terminal.
+The ads don't use that sign-in. If they ask about the "Clickback · Connect this computer" line above the prompt, or why no ads show yet: they open the link in that line, check the code matches and press Connect. It covers every session on that computer.
 
 Keep answers short, in plain language, and quote amounts exactly as the tools return them. Never make up earnings, ads or report outcomes.
 
